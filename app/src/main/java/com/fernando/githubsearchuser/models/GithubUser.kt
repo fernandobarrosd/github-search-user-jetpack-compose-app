@@ -1,0 +1,24 @@
+package com.fernando.githubsearchuser.models
+
+data class GithubUser(
+    val username: String,
+    val fullName: String,
+    val bio: String,
+    val followersCount: Int,
+    val followingCount: Int,
+    val profileURL: String,
+    val repositoriesURL: String,
+    val userURL: String
+)
+
+
+val fakeGithubUser = GithubUser(
+    username = "fernandobarrosd",
+    fullName = "Fernando de Barros",
+    bio = "Hi, my name is Fernando de Barros, currently I am studying software development.",
+    followersCount = 10,
+    followingCount = 10,
+    profileURL = "https://github.com/fernandobarrosd.png",
+    repositoriesURL = "https://github.com/fernandobarrosd?tab=repositories",
+    userURL = "https://github.com/fernandobarrosd"
+)

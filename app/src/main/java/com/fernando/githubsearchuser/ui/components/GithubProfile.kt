@@ -1,0 +1,109 @@
+package com.fernando.githubsearchuser.ui.components
+
+import androidx.compose.foundation.BorderStroke
+import androidx.compose.foundation.background
+import androidx.compose.foundation.border
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxHeight
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.heightIn
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.verticalScroll
+import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.painter.ColorPainter
+import androidx.compose.ui.graphics.painter.Painter
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
+import coil.compose.AsyncImage
+import com.fernando.githubsearchuser.models.GithubUser
+import com.fernando.githubsearchuser.models.fakeGithubUser
+import com.fernando.githubsearchuser.ui.theme.Violet500
+import com.fernando.githubsearchuser.ui.theme.poppinsFontFamily
+
+
+@Composable
+fun GithubProfile(user: GithubUser) {
+    Column(
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        AsyncImage(
+            model = user.profileURL,
+            contentDescription = "Github profile",
+            modifier = Modifier
+                .clip(CircleShape)
+                .size(120.dp),
+            placeholder = ColorPainter(color = Color.White)
+        )
+        Spacer(Modifier.size(16.dp))
+        Text(
+            text = user.fullName,
+            color = Color.White,
+            fontSize = 20.sp,
+            fontFamily = poppinsFontFamily,
+            fontWeight = FontWeight.W400
+        )
+        Text(
+            text = "@${user.username}",
+            color = Color.White,
+            fontSize = 20.sp,
+            fontFamily = poppinsFontFamily,
+            fontWeight = FontWeight.Bold
+        )
+        Spacer(Modifier.size(48.dp))
+        Box(
+            modifier = Modifier
+                .width(350.dp)
+                .heightIn(max = 200.dp)
+                .verticalScroll(rememberScrollState())
+                .background(Violet500)
+                .padding(20.dp)
+        ) {
+            Text(
+                text = user.bio,
+                color = Color.White,
+                fontSize = 16.sp,
+                fontFamily = poppinsFontFamily,
+                fontWeight = FontWeight.W400
+            )
+        }
+        Spacer(Modifier.size(56.dp))
+        Row {
+            GithubProfileButton(
+                text = "Perfil",
+                onClick = {}
+            )
+            Spacer(Modifier.size(24.dp))
+            GithubProfileButton(
+                text = "Repositórios",
+                onClick = {}
+            )
+
+        }
+    }
+}
+
+@Preview
+@Composable
+private fun GithubProfilePreview() {
+    GithubProfile(
+        user = fakeGithubUser
+    )
+}
