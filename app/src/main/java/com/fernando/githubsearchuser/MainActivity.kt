@@ -10,7 +10,7 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.fernando.githubsearchuser.ui.screens.HomeScreen
+import com.fernando.githubsearchuser.ui.screens.GithubUserScreen
 import com.fernando.githubsearchuser.ui.theme.GithubSearchUserTheme
 
 class MainActivity : ComponentActivity() {
@@ -28,7 +28,7 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun App() {
     Scaffold { paddingValues ->
-        HomeScreen(paddingValues)
+        GithubUserScreen(paddingValues)
     }
 }
 

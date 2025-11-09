@@ -1,9 +1,11 @@
 package com.fernando.githubsearchuser.models
 
+import androidx.compose.ui.tooling.preview.datasource.LoremIpsum
+
 data class GithubUser(
     val username: String,
-    val fullName: String,
-    val bio: String,
+    val fullName: String?,
+    val bio: String?,
     val followersCount: Int,
     val followingCount: Int,
     val profileURL: String,
@@ -15,7 +17,7 @@ data class GithubUser(
 val fakeGithubUser = GithubUser(
     username = "fernandobarrosd",
     fullName = "Fernando de Barros",
-    bio = "Hi, my name is Fernando de Barros, currently I am studying software development.",
+    bio = LoremIpsum().values.joinToString(" "),
     followersCount = 10,
     followingCount = 10,
     profileURL = "https://github.com/fernandobarrosd.png",
