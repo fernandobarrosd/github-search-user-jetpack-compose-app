@@ -6,7 +6,18 @@ plugins {
     alias(libs.plugins.kotlin.compose)
 }
 
+val properties = Properties()
+properties.load(project.rootProject.file("api.properties").reader())
+
 android {
+    signingConfigs {
+        create("release") {
+            storeFile = file(properties["key-store.path"] as String)
+            storePassword = properties["key-store.password"] as String
+            keyAlias = properties["key-store.alias"] as String
+            keyPassword = properties["key-store.alias.password"] as String
+        }
+    }
     namespace = "com.fernando.githubsearchuser"
     compileSdk {
         version = release(36)
@@ -21,12 +32,10 @@ android {
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
-        val properties = Properties()
-        properties.load(project.rootProject.file("api.properties").reader())
-
         val apiToken = properties.getProperty("api.token")
 
         buildConfigField("String", "GITHUB_API_TOKEN", "\"$apiToken\"")
+        signingConfig = signingConfigs.getByName("release")
     }
 
 
