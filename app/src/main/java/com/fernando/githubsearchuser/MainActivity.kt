@@ -1,14 +1,11 @@
 package com.fernando.githubsearchuser
 
-import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.Column
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.fernando.githubsearchuser.ui.screens.GithubUserScreen
 import com.fernando.githubsearchuser.ui.theme.GithubSearchUserTheme
@@ -19,21 +16,25 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             GithubSearchUserTheme {
-                AppPreview()
+                App(
+                    onFinishApp = {
+                        finish()
+                    }
+                )
             }
         }
     }
 }
 
 @Composable
-fun App() {
+fun App(onFinishApp: () -> Unit) {
     Scaffold { paddingValues ->
-        GithubUserScreen(paddingValues)
+        GithubUserScreen(paddingValues, onFinishApp)
     }
 }
 
 @Preview
 @Composable
 private fun AppPreview() {
-    App()
+    App(onFinishApp = {})
 }
