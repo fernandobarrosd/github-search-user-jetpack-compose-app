@@ -1,4 +1,4 @@
-package com.fernando.githubsearchuser.models
+package com.fernando.gitsearchuser.models
 
 import androidx.compose.ui.tooling.preview.datasource.LoremIpsum
 

@@ -1,4 +1,4 @@
-package com.fernando.githubsearchuser.ui.theme
+package com.fernando.gitsearchuser.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

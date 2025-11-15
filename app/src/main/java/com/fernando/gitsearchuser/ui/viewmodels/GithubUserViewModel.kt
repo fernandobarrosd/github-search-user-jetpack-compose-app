@@ -1,12 +1,12 @@
-package com.fernando.githubsearchuser.ui.viewmodels
+package com.fernando.gitsearchuser.ui.viewmodels
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.fernando.githubsearchuser.models.GithubUser
-import com.fernando.githubsearchuser.responses.GithubUserResponse
-import com.fernando.githubsearchuser.services.GithubService
+import com.fernando.gitsearchuser.models.GithubUser
+import com.fernando.gitsearchuser.responses.GithubUserResponse
+import com.fernando.gitsearchuser.services.GithubService
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

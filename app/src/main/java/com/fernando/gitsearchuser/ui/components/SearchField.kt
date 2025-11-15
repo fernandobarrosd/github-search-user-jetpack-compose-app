@@ -1,4 +1,4 @@
-package com.fernando.githubsearchuser.ui.components
+package com.fernando.gitsearchuser.ui.components
 
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -28,7 +28,7 @@ import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.fernando.githubsearchuser.ui.theme.poppinsFontFamily
+import com.fernando.gitsearchuser.ui.theme.poppinsFontFamily
 
 @Composable
 fun SearchField(

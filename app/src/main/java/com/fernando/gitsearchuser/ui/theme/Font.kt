@@ -1,9 +1,9 @@
-package com.fernando.githubsearchuser.ui.theme
+package com.fernando.gitsearchuser.ui.theme
 
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
-import com.fernando.githubsearchuser.R
+import com.fernando.gitsearchuser.R
 
 val poppinsFontFamily = FontFamily(
     Font(

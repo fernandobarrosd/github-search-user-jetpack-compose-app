@@ -1,4 +1,4 @@
-package com.fernando.githubsearchuser
+package com.fernando.gitsearchuser
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -7,8 +7,8 @@ import androidx.activity.enableEdgeToEdge
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
-import com.fernando.githubsearchuser.ui.screens.GithubUserScreen
-import com.fernando.githubsearchuser.ui.theme.GithubSearchUserTheme
+import com.fernando.gitsearchuser.ui.screens.GithubUserScreen
+import com.fernando.gitsearchuser.ui.theme.GithubSearchUserTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

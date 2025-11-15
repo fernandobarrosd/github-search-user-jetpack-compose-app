@@ -1,4 +1,4 @@
-package com.fernando.githubsearchuser.ui.components
+package com.fernando.gitsearchuser.ui.components
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -30,10 +30,10 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil.compose.SubcomposeAsyncImage
-import com.fernando.githubsearchuser.models.GithubUser
-import com.fernando.githubsearchuser.models.fakeGithubUser
-import com.fernando.githubsearchuser.ui.theme.Violet500
-import com.fernando.githubsearchuser.ui.theme.poppinsFontFamily
+import com.fernando.gitsearchuser.models.GithubUser
+import com.fernando.gitsearchuser.models.fakeGithubUser
+import com.fernando.gitsearchuser.ui.theme.Violet500
+import com.fernando.gitsearchuser.ui.theme.poppinsFontFamily
 
 @Composable
 fun GithubProfileButton(

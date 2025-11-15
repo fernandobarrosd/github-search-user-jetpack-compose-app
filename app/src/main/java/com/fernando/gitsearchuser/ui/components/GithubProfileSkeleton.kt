@@ -1,4 +1,4 @@
-package com.fernando.githubsearchuser.ui.components
+package com.fernando.gitsearchuser.ui.components
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -33,6 +33,7 @@ fun GithubProfileButtonSkeleton() {
     ) {
     }
 }
+
 
 @Preview
 @Composable

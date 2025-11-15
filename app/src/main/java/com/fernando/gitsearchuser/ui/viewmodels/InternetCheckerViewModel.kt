@@ -1,11 +1,9 @@
-package com.fernando.githubsearchuser.ui.viewmodels
+package com.fernando.gitsearchuser.ui.viewmodels
 
 import android.net.ConnectivityManager
 import android.net.Network
 import android.net.NetworkCapabilities
 import android.net.NetworkRequest
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import kotlinx.coroutines.flow.Flow

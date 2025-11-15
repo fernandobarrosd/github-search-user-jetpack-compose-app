@@ -1,7 +1,7 @@
-package com.fernando.githubsearchuser.services
+package com.fernando.gitsearchuser.services
 
-import com.fernando.githubsearchuser.BuildConfig
-import com.fernando.githubsearchuser.responses.GithubUserResponse
+import com.fernando.gitsearchuser.BuildConfig
+import com.fernando.gitsearchuser.responses.GithubUserResponse
 import okhttp3.OkHttpClient
 import retrofit2.Call
 import retrofit2.Retrofit
