@@ -18,13 +18,13 @@ android {
             keyPassword = properties["key-store.alias.password"] as String
         }
     }
-    namespace = "com.fernando.githubsearchuser"
+    namespace = "com.fernando.gitsearchuser"
     compileSdk {
         version = release(36)
     }
 
     defaultConfig {
-        applicationId = "com.fernando.githubsearchuser"
+        applicationId = "com.fernando.gitsearchuser"
         minSdk = 24
         targetSdk = 36
         versionCode = 1
